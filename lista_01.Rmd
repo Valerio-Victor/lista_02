@@ -1,0 +1,344 @@
+---
+title: 'Lista 01 - Macroeconomia'
+startover: Start Over
+startovertitle: $t(button.startover)
+output:
+  learnr::tutorial:
+    language: pt
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+
+
+```
+
+## Questões Aplicadas
+
+### Questão 01
+
+**Trecho 01:**
+
+  - **Jornal:Valor Econômico.**
+  - **Autor: Álvaro Fagundes.** 
+  - **Data: 01/06/2023.**
+  
+_"PIB: Brasil tem 4ª maior alta entre 50 maiores economias no 1º tri"_
+
+_"Alta da economia brasileira só ficou atrás das de Hong Kong (5,3%), Polônia 
+(3,8%) e China (2,2%) e foi idêntica à da Tailândia."_
+
+**Trecho 02:**
+
+  - **Jornal:Valor Econômico.**
+  - **Autor: Sergio Lamucci.** 
+  - **Data: 01/06/2023.**
+  
+_"ANÁLISE: PIB surpreende com impulso extraordinário do agro, mas demanda 
+doméstica tem ritmo fraco"_
+
+_"O resultado do PIB do primeiro trimestre mostrou um crescimento forte, bem 
+acima das projeções dos analistas, com um alta muito expressiva e muito 
+concentrada na agropecuária. [...] Pelo lado da demanda, o resultado do PIB 
+trouxe notícias menos favoráveis. A mais negativa foi a queda de 3,4% do 
+investimento, a segunda queda trimestral seguida. O consumo das famílias também 
+teve um desempenho pouco exuberante – avançou 0,2%, em desaceleração pelo 
+terceiro trimestre seguido, apesar da força do mercado de trabalho e do volume 
+expressivo de transferências de renda do governo via Bolsa Família. O consumo 
+do governo, por sua vez, cresceu 0,3%."_
+
+**Interpretações**
+
+1. A partir do crescimento do PIB indicado pode-se inferir que há uma relativa 
+melhora na qualidade de vida da população no primeiro trimestre relacionada ao 
+aumento de renda. Contudo, deve-se levar em consideração que há limites de 
+avaliação para o PIB na medida em que este não reflete à desigualdade acentuada, 
+principalmente, em um contexto de crescimento “puxado” pela agropecuária
+
+2. Dado o aumento do valor da transferência de renda via Bolsa Família, aprovado 
+no início do Governo, não era de se esperar um resultado negativo dos 
+investimentos (componente da demanda agregada)  
+
+3. Os baixos crescimentos apresentados pelos componentes da demanda agregada 
+internos e privados podem ter relação ao alto valor da taxa de juros básica da 
+economia que acabam por encarecer os valores de empréstimos e financiamentos
+
+4. A partir dos dados apresentados não há evidências para se afirmar que a 
+inflação de demanda está controlada no ano e, portanto, não há razões para o 
+Banco Central do Brasil baixar a taxa de juros SELIC
+
+5. O nível de taxa de câmbio nominal próximo de 5 R\$/U\$ acabou por prejudicar o 
+desempenho da economia brasileira no primeiro trimestre de 2023, uma vez que a 
+desvalorização da moeda reduz as receitas de exportações
+
+
+
+```{r pergunta_1}
+quiz(
+  question(
+    'Avalie os trechos dos artigos publicados no jornal Valor Econômico em 
+    01/06/2023 e marque a alternativa correta',
+    
+    answer('Apenas as interpretações 1, 2 3 estão corretas', correct = TRUE),
+    answer('Apenas as interpretações 2 e 5 estão corretas'),
+    answer('Apenas as interpretações 2, 3 e 4 estão corretas'),
+    answer('Apenas as interpretações 4 e 5 estão corretas'),
+    answer('Apenas as interpretações 2, 3 e 5 estão corretas'),
+    
+    random_answer_order = TRUE,
+    
+    correct = 'Correto!',
+    post_message = 'O PIB corresponde a soma dos bens finais de uma economia. 
+    Quando ele cresce "impulsionado pelo Agro", significa que a quantidade 
+    produzida destes tipos de produto que cresceram e isto eleva a renda da 
+    população (produto agregado = renda agregada). Contudo, não podemos esquecer
+    que as rendas de um setor produtivo são dividas em salários, aluguéis, juros
+    e lucros e, em geral, o agronegócio brasileiro é mecanizado e, assim, 
+    emprega pouca mão de obra (pouca quantidade de renda se converte em salário).
+    Pelo lado da demanda, deve-se observar que os componentes de consumo das 
+    famílias - C e investimento das empresas - I (consumo interno) estão baixos, não 
+    havendo sinal de aumento da inflação de demanda e, porntanto, não havendo motivo 
+    para que o Banco Central do Brasil aumente a taxa básica de juros (SELIC). 
+    Isto ocorre pois o agronegócio é voltado para exportação - X (consumo externo) 
+    e isto não impacta diretamente na inflação de demanda. Em um cenário de câmbio 
+    nominal desvalorizado, há um aumento do incentivo às exportações.',
+
+    try_again_button = 'Nova Tentativa',
+    allow_retry = TRUE,
+    incorrect = 'Veja os sequintes slides:
+    [Taxa de Inflação - Causas](https://valerio-victor.github.io/iepg20_tema_02/#38);
+    [Taxa de Câmbio - Desvalorização](https://valerio-victor.github.io/iepg20_tema_03/#9);
+    [Taxa de Câmbio - Mercado Internacional](https://valerio-victor.github.io/iepg20_tema_03/#16);
+    [Agregados Macroeconômicos - Valor Adicionado do Setor Produtivo](https://valerio-victor.github.io/iepg20_tema_05/#19);
+    [Agregados Macroeconômicos - Tipos de Renda](https://valerio-victor.github.io/iepg20_tema_05/#21);
+    [Agregados Macroeconômicos - Equação Macroeconômica](https://valerio-victor.github.io/iepg20_tema_05/#43)'
+  )
+)
+```
+
+
+### Questão 02
+
+**Trecho 01:**
+
+  - **Jornal:Valor Econômico.**
+  - **Autor: Marcelo Osakab.** 
+  - **Data: 22/05/2023.**
+  
+_"Projeção do IPCA de 2023 cai de 6,02% para 5,80%, aponta Focus (Focus é uma 
+pesquisa de avaliação de expectativa de inflação realizada pelo Banco Central 
+do Brasil junto aos agentes econômicos)"_
+
+_"A mediana das projeções dos economistas de mercado para a inflação oficial 
+brasileira de 2023 caiu de 6,02% para 5,80%, segundo o Relatório Focus, do 
+Banco Central (BC), divulgado nesta segunda-feira (22) com estimativas coletadas 
+até o fim da semana passada. Para 2024, a mediana das expectativas para o Índice 
+Nacional de Preços ao Consumidor Amplo (IPCA) recuou de 4,15% para 4,13%. Para 
+2025, se manteve em 4,00%"_
+
+**Interpretações**
+
+1. O texto acima retrata que as expectativas dos agentes quanto a inflação também 
+são monitoradas pelo governo
+
+2. O artigo demonstra que as expectativas do agentes são monitoradas pois elas 
+podem, em alguns contextos, impulsionar a inflação. Isto é chamado de inércia 
+inflacionária
+
+3. O trecho acima sinaliza ao Banco Central do Brasil a viabilidade de uma redução 
+da taxa básica de juros da economia brasileira
+
+4. Para o gestor de uma empresa que pretende comprar um determinado equipamento, 
+o trecho acima pode ser utilizado para pautar sua decisão. Pode ser mais apropriado 
+postergar a compra do equipamento, caso ele seja financiado, pois há uma perspectiva 
+futura de redução dos juros cobrados pelos bancos
+
+
+```{r pergunta_2}
+quiz(
+  question(
+    'Avalie os trechos dos artigos publicados no jornal Valor Econômico em 
+    01/06/2023 e marque a alternativa correta',
+    
+    answer('Apena a interpretação 2 está correta'),
+    answer('Apenas as interpretações 2, 3 e 4 estão corretas', correct = TRUE),
+    answer('Apenas as interpretações 1, 2 e 3 estão corretas'),
+    answer('Apenas as interpretações 2 e 3 estão corretas'),
+    answer('Todas as interpretações estão corretas'),
+    
+    random_answer_order = TRUE,
+    
+    correct = 'Correto!',
+    post_message = 'O Banco Central do Brasil é uma entidade de administração 
+    indireta com autonomia administrativa. Isto significa dizer que não é correto
+    afirmar que o Banco Central do Brasil é governo (há autonomia administrativa).
+    De fato, se as expectativas a respeito da inflação apresentam uma tendência 
+    de queda, o Banco Central pode baixar a taxa básica de juros pois não há 
+    uma pressão inflacionária a ser contida. Assim, caso todo o movimento supracitado
+    ocorra, é esperado uma diminuição de todas as taxas de juros de empréstimos e
+    financiamentos em uma economia.',
+
+    try_again_button = 'Nova Tentativa',
+    allow_retry = TRUE,
+    incorrect = 'Veja os sequintes slides:
+    [Taxa de Inflação - Causas](https://valerio-victor.github.io/iepg20_tema_02/#41);
+    [Taxa de Juros - SELIC](https://valerio-victor.github.io/iepg20_tema_04/#11)
+    [Agregados Macroeconômicos - Equação Macroeconômica](https://valerio-victor.github.io/iepg20_tema_05/#43)'
+  )
+)
+```
+
+
+### Questão 03
+
+**Trecho 01:**
+
+  - **Jornal:Valor Econômico.**
+  - **Autor: Não assinado.** 
+  - **Data: 02/06/2023.**
+  
+_"PIB do 1º tri surpreende com impulso do agro; demanda interna avança pouco"_
+
+_"Além disso, os juros elevados têm impacto sobre a economia, ao encarecer o 
+crédito. Na direção contrária, o mercado de trabalho e o dinheiro de programas 
+como o Bolsa Família e da antecipação do 13º para aposentados darão alguma 
+sustentação à atividade."_
+
+**Interpretações**
+
+1. Pode-se afirmar pelo trecho acima que a manutenção da taxa básica de juros em 
+níveis elevados está reduzindo o “aquecimento da economia” na medida em que 
+encarece o crédito e, portanto, a demanda
+
+2. O aumento do valor do Bolsa Família, por sua vez, por se tratar de uma política 
+de transferência de renda para a população vulnerável do país, tende a impulsionar
+o consumo e, assim, atenuar a redução do nível de atividade econômica do Brasil 
+
+3. Se assumirmos que o saldo geral dessas políticas opostas, aumento do programa 
+bolsa família e elevaçãoda taxa SELIC, consiste em uma redução da demanda interna 
+no primeiro trimestre de 2023, pode-se afirmar que não há razões para se esperar 
+um aumento da inflação de demanda no período
+
+4. Há longo prazo, reduções cosntantes no nível investimento das empresas podem
+gerar um processo de desindustrialização, com impacto na inflação de custos
+
+
+```{r pergunta_3}
+quiz(
+  question(
+    'Avalie os trechos dos artigos publicados no jornal Valor Econômico em 
+    01/06/2023 e marque a alternativa correta',
+    
+    answer('Apenas as interpretações 2, 3 e 4 estão corretas'),
+    answer('Apenas as interpretações 1, 2 e 3 estão corretas'),
+    answer('Apenas as interpretações 1 e 3 estão corretas'),
+    answer('Apenas as interpretações 2 e 3 estão corretas'),
+    answer('Todas as interpretações estão corretas', correct = TRUE),
+    
+    random_answer_order = TRUE,
+    
+    correct = 'Correto!',
+    post_message = 'As interpretações evidenciam que de um lado há um impulso ao
+    consumo das famílias - C devido ao aumento das políticas afirmativas. A partir 
+    deste contexto, também era de se esperar um aumento dos investimentos das 
+    empresas - I com a finalidade de atender o correspondente consumo das famílias - C.
+    No entanto, este resultado não foi identificado e uma explicação possível para o
+    fato consiste na alta taxa básica de juros (SELIC) praticada no período que 
+    acabou por "frear" o estímulo a demanda (e seu provável impacto na inflação).
+    De fato, a produtividade da indústria nacional e, portanto, os custos de produção
+    dependem do nível de investimento (se os investimentos diminuem, há uma tendência
+    de diminuição da produtividade e aumento dos custos).',
+
+    try_again_button = 'Nova Tentativa',
+    allow_retry = TRUE,
+    incorrect = 'Veja os sequintes slides:
+    [Taxa de Inflação - Demanda](https://valerio-victor.github.io/iepg20_tema_02/#38);
+    [Taxa de Inflação - Custos](https://valerio-victor.github.io/iepg20_tema_02/#39);
+    [Agregados Macroeconômicos - Equação Macroeconômica](https://valerio-victor.github.io/iepg20_tema_05/#43)'
+  )
+)
+```
+
+### Questão 04
+
+**Trecho 01:**
+
+  - **Jornal:Valor Econômico.**
+  - **Autor: Álvaro Fagundes.** 
+  - **Data: 01/06/2023.**
+  
+_"PIB: Brasil tem 4ª maior alta entre 50 maiores economias no 1º tri"_
+
+_"Alta da economia brasileira só ficou atrás das de Hong Kong (5,3%), Polônia 
+(3,8%) e China (2,2%) e foi idêntica à da Tailândia."_
+
+**Trecho 02:**
+
+  - **Jornal:Valor Econômico.**
+  - **Autor: Sergio Lamucci.** 
+  - **Data: 01/06/2023.**
+  
+_"ANÁLISE: PIB surpreende com impulso extraordinário do agro, mas demanda 
+doméstica tem ritmo fraco"_
+
+_"O resultado do PIB do primeiro trimestre mostrou um crescimento forte, bem 
+acima das projeções dos analistas, com um alta muito expressiva e muito 
+concentrada na agropecuária. [...] Pelo lado da demanda, o resultado do PIB 
+trouxe notícias menos favoráveis. A mais negativa foi a queda de 3,4% do 
+investimento, a segunda queda trimestral seguida. O consumo das famílias também 
+teve um desempenho pouco exuberante – avançou 0,2%, em desaceleração pelo 
+terceiro trimestre seguido, apesar da força do mercado de trabalho e do volume 
+expressivo de transferências de renda do governo via Bolsa Família. O consumo 
+do governo, por sua vez, cresceu 0,3%."_
+
+**Interpretações**
+
+1. A partir do crescimento do PIB indicado pode-se inferir que há uma relativa 
+melhora na qualidade de vida da população no primeiro trimestre relacionada ao 
+aumento de renda. Contudo, deve-se levar em consideração que há limites de 
+avaliação para o PIB na medida em que este não reflete à desigualdade acentuada,
+principalmente, em um contexto de crescimento “puxado” pela agropecuária
+
+2. Dado o aumento do valor da transferência de renda via Bolsa Família, aprovado 
+no início do Governo, não era de se esperar um resultado negativo da demanda 
+agregada (uma vez que era esperado um aumento do consumo ocorrido pela 
+transferência de renda da população vulnerável do país)
+
+3. Os baixos crescimentos apresentados por componentes da demanda agregada 
+internos e privados podem ter relação ao alto valor da taxa de juros básica da 
+economia que acabam por encarecer os valores de empréstimos e financiamentos
+
+
+```{r pergunta_4}
+quiz(
+  question(
+    'Avalie os trechos dos artigos publicados no jornal Valor Econômico em 
+    01/06/2023 e marque a alternativa correta',
+    
+    answer('Apena a interpretação 1 está correta'),
+    answer('Apena a interpretação 2 está correta'),
+    answer('Apena a interpretação 3 está correta'),
+    answer('Apenas as interpretações 2 e 3 estão corretas'),
+    answer('Todas as interpretações estão corretas', correct = TRUE),
+    
+    random_answer_order = TRUE,
+    
+    correct = 'Correto!',
+    post_message = 'As interpretações evidenciam que de um lado há um impulso ao
+    consumo das famílias - C devido ao aumento das políticas afirmativas. A partir 
+    deste contexto, também era de se esperar um aumento dos investimentos das 
+    empresas - I com a finalidade de atender o correspondente consumo das famílias - C.
+    No entanto, este resultado não foi identificado e uma explicação possível para o
+    fato consiste na alta taxa básica de juros (SELIC) praticada no período que 
+    acabou por "frear" o estímulo a demanda (e seu provável impacto na inflação).',
+
+    try_again_button = 'Nova Tentativa',
+    allow_retry = TRUE,
+    incorrect = 'Veja os sequintes slides:
+    [Taxa de Inflação - Causas](https://valerio-victor.github.io/iepg20_tema_02/#38);
+    [Agregados Macroeconômicos - Equação Macroeconômica](https://valerio-victor.github.io/iepg20_tema_05/#43)'
+  )
+)
+```
